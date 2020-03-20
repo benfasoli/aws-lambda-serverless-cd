@@ -1,0 +1,11 @@
+service: hello-world
+
+provider:
+  name: aws
+  runtime: python3.7
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - httpApi: 'GET /hello'
